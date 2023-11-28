@@ -1,0 +1,371 @@
+*{
+    /* Disable user selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+}
+
+
+@font-face {
+    font-family: 'MetaProBold';
+    src: url('../fonts/MetaProBold.TTF');
+}
+
+.btn {
+    position: absolute;
+    background-color: #009446;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn>.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+
+.text {
+    /* border: 1px solid red; */
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    transform: translate(-10%, 260%);
+    z-index: 10;
+
+    text-align: center;
+}
+
+.text>p {
+    /* border: 1px solid blue; */
+    margin: auto;
+
+    /* font family Meta Pro Bold */
+    font-family: 'MetaProBold';
+    font-size: 35px;
+    color: #585858;
+}
+
+#emergencyNumber{
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    font-family: 'MetaProBold';
+    font-size: 50px;
+    color: red;
+    z-index: 10;    
+}
+
+#watermark{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    background-color: #009446;
+    /* border: 1px solid red; */
+    width: 248px;
+    height: 175px;
+    z-index: 99;
+}
+#watermark>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 140px;
+    z-index: 100;
+}
+
+#watermark-sm{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    background-color: #009446;
+    /* border: 1px solid red; */
+    width: calc(248px / 1.5);
+    height: calc(175px / 1.5);
+    z-index: 99;
+}
+#watermark-sm>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    /* border: 1px solid red; */
+    width: calc(200px / 1.5);
+    height: calc(140px / 1.5);
+    z-index: 100;
+}
+
+#bigTitle{
+    position: absolute;
+    color: #595959;
+    font-size: 72px;
+    font-family: 'MetaProBold';
+    top: 10px;
+    left: 270px;
+    z-index: 99;
+}
+
+#smTitle{
+    position: absolute;
+    color: #595959;
+    font-size: 48px;
+    font-family: 'MetaProBold';
+    top: 23px;
+    left: 180px;
+    z-index: 99;
+}
+
+#upText{
+    position: absolute;
+    /* color: #595959; */
+    color: #7f7f7f;
+    font-size: 48px;
+    font-family: 'MetaProBold';
+    top: 35px;
+    left: 180px;
+    z-index: 99;
+    
+}
+
+#logoDefault{
+    position: absolute;
+    top: 6%;
+    right: 2.5%;
+    object-fit: contain;
+    height: 40px;
+    width: auto;
+    z-index: 100;
+}
+
+#buttonBack{
+    position: absolute;
+    background-color: #009446;
+    bottom: 10px;
+    left: 15px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 100;
+}
+#buttonBack:hover{
+    cursor: pointer;
+}
+#buttonBack:active{
+    transform: scale(0.9);
+}
+
+#buttonBack>img{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    height:65%;
+    width: 65%;
+    z-index: 100;
+}
+
+
+#buttonHome{
+    position: absolute;
+    background-color: #009446;
+    bottom: calc(10px + 75px + 15px);
+    left: 15px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 100;
+}
+#buttonHome:hover{
+    cursor: pointer;
+}
+#buttonHome:active{
+    transform: scale(0.9);
+}
+
+#buttonHome>img{
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    height:65%;
+    width: 65%;
+    z-index: 100;
+}
+
+.chartArea1{
+    position: absolute;
+    top: 58%;
+    left: 30.5%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.qaChart{
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    width: 77%;
+    height: 75%;
+    /* border: 1px solid red; */
+}
+#picklist{
+    position: absolute;
+    top: 18%;
+    left: 26.5%;
+    transform: translateX(-100%);
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+    z-index: 100;
+}
+.title1{
+    position: absolute;
+    top: 20%;
+    left: 30.5%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    /* border: 1px solid red; */
+    border-bottom: 2px dashed #585858;
+    text-align: center;
+    font-family: 'MetaProBold';
+    font-size: 30px;
+    color: #585858;
+
+}
+
+.chartArea2{
+    position: absolute;
+    top: 58%;
+    left: 72.5%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+.title2{
+    position: absolute;
+    top: 20%;
+    left: 72.5%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    /* border: 1px solid red; */
+    border-bottom: 2px dashed #585858;
+
+    text-align: center;
+    font-family: 'MetaProBold';
+    font-size: 30px;
+    color: #585858;
+
+}
+
+#bg_dsa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: -1;
+}
+
+#bgWhite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: white;
+}
+
+#solari {
+    position: absolute;
+    top: 37%;
+    right: 13%;
+    height: 60%;
+    width: auto;
+    z-index: 1;
+    transform: scaleX(-1);
+}
+
+#speechBubbleText{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 22%;
+    right: 4.5%;
+    width: 18.5%;
+    height: 200px;
+    z-index: 3;
+    font-size: 22px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+#speechBubble {
+    position: absolute;
+    top: 20%;
+    right: 1%;
+    width: 24%;
+    height: 350px;
+    z-index: 3;
+    opacity: 0.7;
+    transform: scaleX(-1);
+}
+
+#logoAS {
+    position: absolute;
+    padding-inline: 10px;
+    padding-block: 20px;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    z-index: -1;
+}
+
+select {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font-family: 'MetaProBold';
+    font-size:40px;
+    color: #595959;
+	cursor: pointer;
+    background-color: #fff;
+}
+
+option{
+    font-family: 'MetaProBold';
+    font-size:28px;
+    color: #595959;
+}
+
