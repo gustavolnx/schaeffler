@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+    <g>
+        <path fill="#ffffff" d="M432 320v64l-16 32-16-32v-32H272v32l-16 32-16-32v-32H112v32l-16 32-16-32v-64h160v-32l16-32 16 32v32z" opacity="1" data-original="#4de600" class=""></path>
+        <g fill="#c8fa64">
+            <path d="M160 384v128H32V384h48l16 32 16-32zM320 384v128H192V384h48l16 32 16-32zM480 384v128H352V384h48l16 32 16-32zM352 224v64h-80l-16-32-16 32h-80v-64c0-26.561 10.881-50.561 28.16-67.84C205.439 138.879 229.439 128 256 128c53.119 0 96 42.879 96 96z" fill="#ffffff" opacity="1" data-original="#c8fa64" class=""></path>
+            <circle cx="256" cy="64" r="64" fill="#ffffff" opacity="1" data-original="#c8fa64" class=""></circle>
+        </g>
+        <path fill="#ffffff" d="M400 384h32v32h-32zM240 384h32v32h-32zM80 384h32v32H80zM240 256h32v32h-32z" opacity="1" data-original="#00cc00" class=""></path>
+    </g>
+</svg>

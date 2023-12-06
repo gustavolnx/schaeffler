@@ -84,7 +84,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
     <img id="logoAS" src="../assets/images/logo-as.jpg">
     <img id="logoDefault" src="../assets/images/logo.png">
     <?php
-    $watermark = "../assets/icons/qos.png";
+    $watermark = "../assets/icons/mcr.svg";
     include_once '../components/watermark-sm.php';
 
     $btnOnClick = 'history.back();';
@@ -100,17 +100,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
     <div class="picklist">
         <form action="mcr.php" method="get">
             <div id="picklist">
-                <select id='picklistMonth' name="month" onchange="this.form.submit()">
-                    <?php
-                    foreach ($activeDates[$year] as $key => $value) {
-                        if ($key == $month) {
-                            echo "<option value='{$key}' selected>{$value}</option>";
-                        } else {
-                            echo "<option value='{$key}'>{$value}</option>";
-                        }
-                    }
-                    ?>
-                </select>
+
                 <!-- Year picklist -->
                 <select id='picklistYear' name="year" onchange="this.form.submit()">
                     <?php
@@ -245,6 +235,17 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 width: 150px;
                 z-index: 300;
             }
+
+            #picklist {
+                position: absolute;
+                top: 18%;
+                left: 12%;
+                transform: translateX(-100%);
+                width: auto;
+                height: auto;
+                /* border: 1px solid red; */
+                z-index: 100;
+            }
         </style>
         <div class="qaChart">
             <canvas id="myChart"></canvas>
@@ -278,7 +279,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
             var chartData = {
 
                 datasets: [{
-                    label: 'Estratificaçãoi com Membro em risco',
+                    label: 'Estratificação com Membro em risco',
                     data: [20, 10, 8, 4],
                     backgroundColor: ['#008000', '#800080', '#4444FF', '#5397FD'],
                     borderColor: '#9BD0F5',
@@ -316,32 +317,49 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                         data: [{
                                 // x = horizontal >>>
                                 // y = vertical 
+
+                                // M'ao
                                 x: 140,
                                 y: 240,
-                                r: 20
+                                r: 20 * 2.5
                             }, {
+                                // Ombro
                                 x: 200,
                                 y: 400,
-                                r: 20
-                            }, {
+                                r: 10 * 2.5
+                            },
+                            // Pé
+                            {
                                 x: 200,
                                 y: 150,
-                                r: 20
+                                r: 8 * 2.5
                             }, {
                                 x: 360,
                                 y: 20,
-                                r: 20
+                                r: 4 * 2.5
                             }
 
                         ],
-                        backgroundColor: ['#008000', '#800080', '#5397FD', '#4444FF'],
+                        backgroundColor: ['rgba(0,128,0,0.5)', 'rgba(128,0,128,0.5)', 'rgba(83,151,253,0.5)', 'rgba(68,68,255,0.5)'],
                     }]
                 },
                 options: {
+
+                    animation: {
+                        duration: 0
+                    },
                     plugins: {
                         legend: {
 
                             display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    var label = (context.raw.r / 2.5);
+                                    return label;
+                                }
+                            }
                         }
 
                     },

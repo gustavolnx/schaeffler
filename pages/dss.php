@@ -130,6 +130,16 @@ if (isset($_GET['up']) !== false) {
             top: 90%;
         }
 
+        #logoDefault {
+            position: absolute;
+            top: 3.2%;
+            right: 2.5%;
+            object-fit: contain;
+            height: 37px;
+            width: auto;
+            z-index: 100;
+        }
+
         * {
             overflow: hidden;
         }
@@ -139,7 +149,7 @@ if (isset($_GET['up']) !== false) {
 <body>
     <img id="logoDefault" src="../assets/images/logo.png">
     <?php
-    $watermark = "../assets/icons/dsa.png";
+    $watermark = "../assets/icons/dss.png";
     include_once '../components/watermark-sm.php';
 
     $btnOnClick = 'history.back();';

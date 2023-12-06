@@ -129,7 +129,7 @@ if (isset($_GET['up']) !== false) {
 <body>
     <img id="logoDefault" src="../assets/images/logo.png">
     <?php
-    $watermark = "../assets/icons/dsa.png";
+    $watermark = "../assets/icons/hierarquia.png";
     include_once '../components/watermark-sm.php';
 
     $btnOnClick = 'history.back();';

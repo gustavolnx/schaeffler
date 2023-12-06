@@ -12,7 +12,7 @@
     <img id="logoAS" src="../assets/images/logo-as.jpg">
     <img id="logoDefault" src="../assets/images/logo.png">
     <?php
-    $watermark = "../assets/icons/qa.png";
+    $watermark = "../assets/icons/dsa.png";
     include_once '../components/watermark-sm.php';
 
     $btnOnClick = 'history.back();';

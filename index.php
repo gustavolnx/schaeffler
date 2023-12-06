@@ -89,39 +89,39 @@
     include 'components/roundbutton.php';
     ?>
     <style>
-        .p22 {
+        .mcr {
             top: calc(71.5% - 90px);
             left: calc(24.8% - 2% - 90px);
         }
     </style>
     <?php
-    $buttonstate = 'p22';
+    $buttonstate = 'mcr';
     $text = 'Membros com risco';
     $btnUrl = '"./pages/mcr.php"';
 
     include 'components/roundbutton.php';
     ?>
     <style>
-        .p23 {
+        .dss {
             top: calc(71.5% - 90px);
             left: calc(24.8% + 13% - 90px);
         }
     </style>
     <?php
-    $buttonstate = 'p23';
+    $buttonstate = 'dss';
     $text = 'DSS';
     $btnUrl = '"./pages/dss.php"';
 
     include 'components/roundbutton.php';
     ?>
     <style>
-        .p24 {
+        .hierarquia {
             top: calc(71.5% - 90px);
             left: calc(24.8% + 28% - 90px);
         }
     </style>
     <?php
-    $buttonstate = 'p24';
+    $buttonstate = 'hierarquia';
     $text = 'Hierarquia';
     $btnUrl = '"./pages/hierarquia.php"';
 

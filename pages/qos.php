@@ -100,17 +100,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
     <div class="picklist">
         <form action="qos.php" method="get">
             <div id="picklist">
-                <select id='picklistMonth' name="month" onchange="this.form.submit()">
-                    <?php
-                    foreach ($activeDates[$year] as $key => $value) {
-                        if ($key == $month) {
-                            echo "<option value='{$key}' selected>{$value}</option>";
-                        } else {
-                            echo "<option value='{$key}'>{$value}</option>";
-                        }
-                    }
-                    ?>
-                </select>
+
                 <!-- Year picklist -->
                 <select id='picklistYear' name="year" onchange="this.form.submit()">
                     <?php
@@ -268,6 +258,17 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 position: absolute;
                 display: none;
                 /* border: 1px solid red; */
+            }
+
+            #picklist {
+                position: absolute;
+                top: 18%;
+                left: 18%;
+                transform: translateX(-100%);
+                width: auto;
+                height: auto;
+                /* border: 1px solid red; */
+                z-index: 100;
             }
         </style>
         <div class="scene-1" id="scene-1">

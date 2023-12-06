@@ -68,6 +68,19 @@ $qaJson = file_get_contents('../assets/json/qa.json');
     <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
+<style>
+    #picklist {
+        position: absolute;
+        top: 18%;
+        left: 18%;
+        transform: translateX(-100%);
+        width: auto;
+        height: auto;
+        /* border: 1px solid red; */
+        z-index: 100;
+    }
+</style>
+
 <body>
     <img id="logoAS" src="../assets/images/logo-as.jpg">
     <img id="logoDefault" src="../assets/images/logo.png">

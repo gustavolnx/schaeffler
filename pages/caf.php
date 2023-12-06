@@ -173,6 +173,10 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 cursor: pointer;
             }
 
+            * {
+                overflow: hidden;
+            }
+
             .scene-2 {
                 width: 100%;
                 height: 100%;
@@ -202,6 +206,17 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 position: absolute;
                 display: none;
 
+            }
+
+            #picklist {
+                position: absolute;
+                top: 18%;
+                left: 18%;
+                transform: translateX(-100%);
+                width: auto;
+                height: auto;
+                /* border: 1px solid red; */
+                z-index: 100;
             }
         </style>
         <div class="scene-2" id="scene-2">
