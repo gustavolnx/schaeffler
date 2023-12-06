@@ -96,7 +96,7 @@
     </style>
     <?php
     $buttonstate = 'p22';
-    $text = 'Placeholder';
+    $text = 'Membros com risco';
     $btnUrl = '"./pages/mcr.php"';
 
     include 'components/roundbutton.php';
@@ -109,8 +109,8 @@
     </style>
     <?php
     $buttonstate = 'p23';
-    $text = 'Placeholder';
-    $btnUrl = '"#"';
+    $text = 'DSS';
+    $btnUrl = '"./pages/dss.php"';
 
     include 'components/roundbutton.php';
     ?>
@@ -122,8 +122,8 @@
     </style>
     <?php
     $buttonstate = 'p24';
-    $text = 'Placeholder';
-    $btnUrl = '"#"';
+    $text = 'Hierarquia';
+    $btnUrl = '"./pages/hierarquia.php"';
 
     include 'components/roundbutton.php';
     ?>

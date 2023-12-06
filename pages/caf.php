@@ -195,6 +195,14 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 display: none;
 
             }
+
+            .scene-4 {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: none;
+
+            }
         </style>
         <div class="scene-2" id="scene-2">
             <div class="qaChart">
@@ -206,8 +214,13 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 <canvas id="myChart2"></canvas>
             </div>
         </div>
+        <div class="scene-4" id="scene-4">
+            <div class="qaChart">
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
         <div class="btn-1" id="btn-1"><a>Acidentes CAF</a></div>
-        <div class="btn-2"><a>Dias perdidos</a></div>
+        <div class="btn-2" id="btn-2"><a>Dias perdidos</a></div>
         <div class="btn-3" id="btn-3"><a>Acidentes por setor</a></div>
 
 
@@ -297,6 +310,60 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 data: chartData2,
 
                 options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <script>
+            // 
+            // 
+            //chartData
+            var chartData3 = {
+                datasets: [{
+                    type: 'bar',
+                    label: '',
+                    data: [5, 10, 16, 20, 26, 33, 44, 11, 23, 55, 122, 51],
+
+                }, {
+                    type: 'line',
+                    label: '',
+                    data: [11, 2, 22, 21, 54, 60, 70, 80, 90, 72, 50, 52],
+                }],
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto',
+                    'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
+            };
+
+
+            const ctx3 = document.getElementById('myChart3');
+
+            new Chart(ctx3, {
+                type: 'bar',
+                data: chartData3,
+
+                options: {
+                    plugins: {
+                        legend: {
+                            labels: {
+                                filter: function(legendItem, data) {
+                                    let label = data.datasets[legendItem.datasetIndex].label || '';
+                                    if (typeof(label) !== 'undefined') {
+                                        if (legendItem.datasetIndex >= 3) {
+                                            return false;
+                                        }
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+
+
                     scales: {
                         y: {
                             beginAtZero: true

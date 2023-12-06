@@ -93,7 +93,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
     $btnOnClick = 'location.href="/schaeffler/index.php"';
     include_once '../components/home.php';
     ?>
-    <h1 id="smTitle">Quase acidentes</h1>
+    <h1 id="smTitle">QOS</h1>
     <h5 id="upText"><?php echo $arrayUp[$planta][$up] ?></h5>
 
     <!-- Month picklist-->
@@ -139,7 +139,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
             }
 
 
-            .scene-2 {
+            .scene-10 {
                 width: 78%;
                 height: 8.5%;
                 left: 10%;
@@ -199,7 +199,7 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 position: absolute;
             }
 
-            .scene-2 a {
+            .scene-10 a {
                 font-family: 'Roboto', sans-serif;
                 font-size: 1.3vw;
                 font-weight: bold;
@@ -219,11 +219,90 @@ $qaJson = file_get_contents('../assets/json/qa.json');
             .btn-5 {
                 cursor: pointer;
             }
+
+            .scene-1 {
+                width: 100%;
+                height: 100%;
+                left: 0%;
+                top: 0%;
+                position: absolute;
+                display: none;
+                /* border: 1px solid red; */
+            }
+
+            .scene-2 {
+                width: 100%;
+                height: 100%;
+                left: 0%;
+                top: 0%;
+                position: absolute;
+                display: none;
+                /* border: 1px solid red; */
+            }
+
+            .scene-3 {
+                width: 100%;
+                height: 100%;
+                left: 0%;
+                top: 0%;
+                position: absolute;
+                display: none;
+                /* border: 1px solid red; */
+            }
+
+            .scene-4 {
+                width: 100%;
+                height: 100%;
+                left: 0%;
+                top: 0%;
+                position: absolute;
+                display: none;
+                /* border: 1px solid red; */
+            }
+
+            .scene-5 {
+                width: 100%;
+                height: 100%;
+                left: 0%;
+                top: 0%;
+                position: absolute;
+                display: none;
+                /* border: 1px solid red; */
+            }
         </style>
-        <div class="qaChart">
-            <canvas id="myChart"></canvas>
+        <div class="scene-1" id="scene-1">
+            <div class="qaChart">
+                <canvas id="myChart"></canvas>
+            </div>
+
         </div>
-        <div class="scene-2">
+
+        <div class="scene-2" id="scene-2">
+            <div class="qaChart">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+
+        <div class="scene-3" id="scene-3">
+            <div class="qaChart">
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
+
+        <div class="scene-4" id="scene-4">
+            <div class="qaChart">
+                <canvas id="myChart4"></canvas>
+            </div>
+        </div>
+
+        <div class="scene-5" id="scene-5">
+            <div class="qaChart">
+                <canvas id="myChart5"></canvas>
+            </div>
+        </div>
+
+
+        <div class="scene-10">
             <div class="btn-1"><a>Production</a></div>
             <div class="btn-2"><a>Consumption</a></div>
             <div class="btn-3"><a>Quality Cost</a></div>
@@ -250,14 +329,16 @@ $qaJson = file_get_contents('../assets/json/qa.json');
             var chartData = {
                 datasets: [{
                     type: 'bar',
-                    label: 'Meta',
-                    data: [10, 20, 30, 40]
+                    label: 'Atual acumulado',
+                    data: [700, 8000, 10000, 15533, 20183, 24833, 37000, 34133, 40000]
                 }, {
                     type: 'line',
-                    label: 'Atual',
-                    data: [8, 10, 28, 10],
+                    label: 'Bugdet acumulado',
+                    data: [700, 6000, 11300, 16600, 21900, 27200, 32500, 37800, 43100],
                 }],
-                labels: [1, 2, 3, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 20, 21, 22, 23, 24, 27, 28, 29, 30]
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
             };
 
 
@@ -276,6 +357,156 @@ $qaJson = file_get_contents('../assets/json/qa.json');
                 }
             });
         </script>
+
+        <!-- Consumption -->
+
+        <script>
+            // 
+            // 
+            //chartData
+            var chartData2 = {
+                datasets: [{
+                    type: 'bar',
+                    label: 'Atual acumulado',
+                    data: [27, 800, 1573, 2346, 3119, 3892, 4665, 5438, 6211]
+                }, {
+                    type: 'line',
+                    label: 'Bugdet acumulado',
+                    data: [1, 3, 1, 0, 1, 8, 1, 1, 1],
+                }],
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
+            };
+
+
+            const ctx2 = document.getElementById('myChart2');
+
+            new Chart(ctx2, {
+                type: 'bar',
+                data: chartData2,
+
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+
+
+        <script>
+            // 
+            // 
+            //chartData
+            var chartData3 = {
+                datasets: [{
+                    type: 'bar',
+                    label: 'Atual acumulado(%)',
+                    data: [0.78, 0.90, 1.02, 1.14, 1.26, 1.38, 1.50, 1.62, 1.74]
+                }, {
+                    type: 'line',
+                    label: 'Bugdet acumulado(%)',
+                    data: [0.55, 0.98, 1.41, 1.84, 2.27, 2.70, 3.13, 3.56, 3.99],
+                }],
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
+            };
+
+
+            const ctx3 = document.getElementById('myChart3');
+
+            new Chart(ctx3, {
+                type: 'bar',
+                data: chartData3,
+
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <!-- Complaints -->
+        <script>
+            // 
+            // 
+            //chartData
+            var chartData4 = {
+                datasets: [{
+                    type: 'bar',
+                    label: 'Atual acumulado',
+                    data: [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
+                }, {
+                    type: 'line',
+                    label: 'Bugdet acumulado',
+                    data: [2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98],
+                }],
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
+            };
+
+
+            const ctx4 = document.getElementById('myChart4');
+
+            new Chart(ctx4, {
+                type: 'bar',
+                data: chartData4,
+
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <!-- Hit to promise -->
+        <script>
+            // 
+            // 
+            //chartData
+            var chartData5 = {
+                datasets: [{
+                    type: 'bar',
+                    label: 'Atual acumulado(%)',
+                    data: [91, 89, 87, 86, 84, 82, 91, 89, 78]
+                }, {
+                    type: 'line',
+                    label: 'Bugdet acumulado(%)',
+                    data: [55, 55, 55, 55, 55, 55, 55, 55, 55],
+                }],
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ]
+            };
+
+
+            const ctx5 = document.getElementById('myChart5');
+
+            new Chart(ctx5, {
+                type: 'bar',
+                data: chartData5,
+
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <script src="../assets/javascript/qos.js"></script>
 </body>
 
 </html>

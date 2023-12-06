@@ -2,8 +2,10 @@
 // Selecione os botões e as cenas usando seus IDs
 var btn1 = document.getElementById("btn-1");
 var btn3 = document.getElementById("btn-3");
+var btn2 = document.getElementById("btn-2");
 var scene2 = document.getElementById("scene-2");
 var scene3 = document.getElementById("scene-3");
+var scene4 = document.getElementById("scene-4");
 
 // Adicione um ouvinte de evento de clique ao btn-1
 btn1.addEventListener("click", function () {
@@ -11,8 +13,9 @@ btn1.addEventListener("click", function () {
   scene2.style.display = "block";
 
   // Oculta a scene-3 se estiver visível
-  if (scene3.style.display !== "none") {
+  if (scene3.style.display !== "none" || scene4.style.display !== "none") {
     scene3.style.display = "none";
+    scene4.style.display = "none";
   }
 });
 
@@ -22,7 +25,20 @@ btn3.addEventListener("click", function () {
   scene3.style.display = "block";
 
   // Oculta a scene-2 se estiver visível
-  if (scene2.style.display !== "none") {
+  if (scene2.style.display !== "none" || scene4.style.display !== "none") {
     scene2.style.display = "none";
+    scene4.style.display = "none";
+  }
+});
+
+// Adicione um ouvinte de evento de clique ao btn-2
+btn2.addEventListener("click", function () {
+  // Exibe a scene-4 ao clicar no btn-2
+  scene4.style.display = "block";
+
+  // Oculta a scene-2 se estiver visível
+  if (scene2.style.display !== "none" || scene3.style.display !== "none") {
+    scene2.style.display = "none";
+    scene3.style.display = "none";
   }
 });

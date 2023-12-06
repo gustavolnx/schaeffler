@@ -279,11 +279,11 @@ $qaJson = file_get_contents('../assets/json/qa.json');
 
                 datasets: [{
                     label: 'Estratificaçãoi com Membro em risco',
-                    data: [58, 20, 10, 8, 4],
-                    backgroundColor: ['#ffff00', '#008000', '#800080', '#4444FF', '#5397FD'],
+                    data: [20, 10, 8, 4],
+                    backgroundColor: ['#008000', '#800080', '#4444FF', '#5397FD'],
                     borderColor: '#9BD0F5',
                 }],
-                labels: ['Corpo em Geral', 'Mão', 'Ombros', 'Pé', 'Joelho']
+                labels: ['Mão', 'Ombros', 'Pé', 'Joelho']
 
             };
 
